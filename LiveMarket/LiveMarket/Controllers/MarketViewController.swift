@@ -88,7 +88,9 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
         SwiftEventBus.onMainThread(self, name: "ratesServiceCompleted") { result in
             
             self.ratesArray = result.object as! [RatesDAO]
+            
             self.marketTableView.reloadData()
+            
             NSTimer.scheduledTimerWithTimeInterval(0.8, target: self, selector: #selector(self.updateDataToDictionary), userInfo: nil, repeats: true)
         }
     }
