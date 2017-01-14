@@ -1,0 +1,24 @@
+PODS:
+  - Alamofire (3.5.1)
+  - AlamofireObjectMapper (3.0.2):
+    - Alamofire (~> 3.2)
+    - ObjectMapper (~> 1.0)
+  - ObjectMapper (1.5.0)
+  - PureLayout (3.0.2)
+  - SwiftEventBus (1.1.0)
+
+DEPENDENCIES:
+  - AlamofireObjectMapper (~> 3.0)
+  - PureLayout
+  - SwiftEventBus (~> 1.1.0)
+
+SPEC CHECKSUMS:
+  Alamofire: 0dfba1184a543e2aa160f4e39cac4e8aba48d223
+  AlamofireObjectMapper: 70f97cbf45c01c48d26aa07a1a7059a60ed7411d
+  ObjectMapper: 386645adca9d9d23b95eda43090b09d66444cf14
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
+  SwiftEventBus: d33b51752d4e3e994f0ea7b31873f0beca7eada0
+
+PODFILE CHECKSUM: 00ff4010fef6b09eaa6999b95daa056531628bfc
+
+COCOAPODS: 1.0.1
