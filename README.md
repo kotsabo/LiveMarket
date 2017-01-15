@@ -1,8 +1,8 @@
 # LiveMarket
 
-<b>For this application, i have used AlamofireObjectMapper library to handle the REST service and serialize the response to object. I have also used SwiftEventBus which is an event handler library. Finally, I have used PureLayout in order to manipulate some constraints more easily. All of them are open source libraries under MIT license.</b>
+<b>For this application, I have used AlamofireObjectMapper library to handle the REST service and serialize the response to object. I have also used SwiftEventBus in order to handle events. Finally, I have used PureLayout in order to manipulate some constraints more easily. All of them are open source libraries under MIT license.</b>
 
-<b>I have used MVC architectural pattern. Although, for a project of this scale it wasn't a necessity, and it increases the number of classes, it makes it easier to handle changes and provides decoupled dependencies.</b>
+<b>I have used MVC architectural pattern in order to have distinguished my models, views and controllers.</b>
 
 This app includes:
 
