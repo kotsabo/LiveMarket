@@ -16,12 +16,15 @@ class CodeUtils {
         let new_number_1 = number_buy! * Double(pipMultiplier)
         let new_number_2 = number_sell! * Double(pipMultiplier)
         
+        // get Pips
         _ = self.getPip(number_buy)
         _ = self.getPip(number_sell)
         
+        // get Fractional pips
         let fractionalPip_1 = self.getFractionalPip(new_number_1)
         let fractionalPip_2 = self.getFractionalPip(new_number_2)
         
+        // get spread
         let spread = (number_buy! - number_sell!) * Double(pipMultiplier)
         
         let formatter = NSNumberFormatter()
@@ -32,6 +35,7 @@ class CodeUtils {
         
         let spreadString = formatter.stringFromNumber(spread)
         
+        // get rates
         var finalNumber_1: String?
         var finalNumber_2: String?
         
@@ -48,9 +52,11 @@ class CodeUtils {
             finalNumber_2 = finalNumber_2! + self.getDecimalPart(number_sell).substringToIndex(self.getDecimalPart(number_sell).startIndex.advancedBy(4-counter_2))
         }
         
+        // get highlights
         let highlight_1 = self.getIntPart(new_number_1).substringFromIndex(self.getIntPart(new_number_1).endIndex.advancedBy(-2))
         let highlight_2 = self.getIntPart(new_number_2).substringFromIndex(self.getIntPart(new_number_2).endIndex.advancedBy(-2))
 
+        
         return (finalNumber_1!,finalNumber_2!,fractionalPip_1,fractionalPip_2,spreadString!,highlight_1,highlight_2)
     }
     
