@@ -72,9 +72,9 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AvG-2L-36E">
-                                                            <rect key="frame" x="137" y="25" width="35" height="25"/>
+                                                            <rect key="frame" x="132" y="25" width="45" height="25"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="35" id="HwC-Ca-mIp"/>
+                                                                <constraint firstAttribute="width" constant="45" id="HwC-Ca-mIp"/>
                                                                 <constraint firstAttribute="height" constant="25" id="b8r-MA-yAN"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -82,7 +82,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDB-Yg-aMG">
-                                                            <rect key="frame" x="427" y="25" width="35" height="25"/>
+                                                            <rect key="frame" x="422" y="25" width="45" height="25"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -94,14 +94,14 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="J6T-xT-Ofp">
-                                                            <rect key="frame" x="177" y="37" width="25" height="1"/>
+                                                            <rect key="frame" x="182" y="37" width="25" height="1"/>
                                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="Djr-3S-YbX"/>
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iHX-Cx-VFH">
-                                                            <rect key="frame" x="177" y="15" width="25" height="20"/>
+                                                            <rect key="frame" x="182" y="15" width="25" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="20" id="7s0-6O-Bba"/>
                                                                 <constraint firstAttribute="width" constant="25" id="nCZ-12-tZ0"/>
@@ -111,14 +111,14 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="46b-CW-krn">
-                                                            <rect key="frame" x="467" y="37" width="25" height="1"/>
+                                                            <rect key="frame" x="472" y="37" width="25" height="1"/>
                                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="1" id="cKp-hR-Sta"/>
                                                             </constraints>
                                                         </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mb-b8-91h">
-                                                            <rect key="frame" x="467" y="15" width="25" height="20"/>
+                                                            <rect key="frame" x="472" y="15" width="25" height="20"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="25" id="Uhy-GL-QsA"/>
                                                             </constraints>
@@ -127,7 +127,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdP-wt-eim">
-                                                            <rect key="frame" x="204" y="12" width="15" height="15"/>
+                                                            <rect key="frame" x="209" y="12" width="15" height="15"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="15" id="A5u-mY-LXK"/>
                                                                 <constraint firstAttribute="height" constant="15" id="aZ6-jm-e86"/>
@@ -137,7 +137,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="McH-Dh-oWG">
-                                                            <rect key="frame" x="494" y="12" width="15" height="15"/>
+                                                            <rect key="frame" x="499" y="12" width="15" height="15"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
