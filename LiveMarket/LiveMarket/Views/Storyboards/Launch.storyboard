@@ -18,8 +18,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pkA-YK-PVA" customClass="DarkButton" customModule="LiveMarket" customModuleProvider="target">
-                                <rect key="frame" x="25" y="495" width="550" height="50"/>
+                                <rect key="frame" x="132.5" y="495" width="335" height="50"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="QEf-Cg-eG6"/>
                                     <constraint firstAttribute="height" constant="50" id="f0E-ke-UOd"/>
                                 </constraints>
                                 <state key="normal">
@@ -29,7 +30,7 @@
                                     <action selector="enterButtonTapped:" destination="HnP-gP-vzV" eventType="touchUpInside" id="wIq-CR-Oxh"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="market" translatesAutoresizingMaskIntoConstraints="NO" id="kn2-js-2Mi">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="market" translatesAutoresizingMaskIntoConstraints="NO" id="kn2-js-2Mi">
                                 <rect key="frame" x="150" y="97" width="300" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="i1W-Fe-ug0"/>
@@ -39,15 +40,18 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="kn2-js-2Mi" firstAttribute="centerX" secondItem="zbM-aa-fNu" secondAttribute="centerX" id="YdU-OY-ElB"/>
-                            <constraint firstAttribute="trailing" secondItem="pkA-YK-PVA" secondAttribute="trailing" constant="25" id="dHC-Mz-WBC"/>
                             <constraint firstItem="70K-lO-Mlv" firstAttribute="top" secondItem="pkA-YK-PVA" secondAttribute="bottom" constant="55" id="ilM-y7-B4h"/>
                             <constraint firstItem="kn2-js-2Mi" firstAttribute="centerY" secondItem="zbM-aa-fNu" secondAttribute="centerY" constant="-78" id="qAA-7A-xcp"/>
-                            <constraint firstItem="pkA-YK-PVA" firstAttribute="leading" secondItem="zbM-aa-fNu" secondAttribute="leading" constant="25" id="tQz-Ty-OyG"/>
+                            <constraint firstItem="pkA-YK-PVA" firstAttribute="centerX" secondItem="zbM-aa-fNu" secondAttribute="centerX" id="uGe-me-xSd"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="enterButton" destination="pkA-YK-PVA" id="bVQ-ev-dD3"/>
+                        <outlet property="enterButtonHeightConstraint" destination="f0E-ke-UOd" id="4zU-Z9-IAd"/>
+                        <outlet property="enterButtonWidthConstraint" destination="QEf-Cg-eG6" id="4s4-9Q-NiC"/>
                         <outlet property="marketImageView" destination="kn2-js-2Mi" id="oLG-Hf-2Yz"/>
+                        <outlet property="marketImageViewHeightConstraint" destination="oY9-ql-ZwA" id="Nri-lF-7OG"/>
+                        <outlet property="marketImageViewWidthConstraint" destination="i1W-Fe-ug0" id="oCB-h8-bWS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16O-J5-o5x" userLabel="First Responder" sceneMemberID="firstResponder"/>

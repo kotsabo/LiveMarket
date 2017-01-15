@@ -16,6 +16,8 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var navigationBarView: NavigationBar!
     @IBOutlet weak var marketTableView: UITableView!
     
+    @IBOutlet weak var navigationBarHeightConstraint: NSLayoutConstraint!
+    
     var ratesArray: [RatesDAO] = [RatesDAO]()
     var dictionaryRates: [Int : RatesDAO] = [ : ]
     
@@ -39,7 +41,7 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
         
         WebServiceInvocation.ratesService()
         self.getResponse()
-        NSTimer.scheduledTimerWithTimeInterval(1.5, target: self, selector: #selector(self.makeCall), userInfo: nil, repeats: true)
+        NSTimer.scheduledTimerWithTimeInterval(1.3, target: self, selector: #selector(self.makeCall), userInfo: nil, repeats: true)
     }
     
     override func viewWillDisappear(animated: Bool) {
@@ -53,6 +55,7 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
     private func customizeView() {
         
         self.view.backgroundColor = Colors.DarkGray
+        self.navigationBarHeightConstraint.constant *= UIView.verticalAdaptationFactor()
     }
     
     private func setupStrings() {
@@ -91,7 +94,7 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
             
             self.marketTableView.reloadData()
             
-            NSTimer.scheduledTimerWithTimeInterval(0.8, target: self, selector: #selector(self.updateDataToDictionary), userInfo: nil, repeats: true)
+            NSTimer.scheduledTimerWithTimeInterval(0.7, target: self, selector: #selector(self.updateDataToDictionary), userInfo: nil, repeats: false)
         }
     }
     

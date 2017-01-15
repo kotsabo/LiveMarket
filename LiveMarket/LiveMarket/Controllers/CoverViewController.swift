@@ -15,6 +15,12 @@ class CoverViewController: UIViewController {
     @IBOutlet weak var marketImageView: UIImageView!
     @IBOutlet weak var enterButton: DarkButton!
     
+    @IBOutlet weak var enterButtonHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var enterButtonWidthConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var marketImageViewWidthConstraint: NSLayoutConstraint!
+    @IBOutlet weak var marketImageViewHeightConstraint: NSLayoutConstraint!
+    
     //MARK: - ViewController Lifecycle
 
     override func viewDidLoad() {
@@ -34,6 +40,10 @@ class CoverViewController: UIViewController {
     private func customizeView() {
         
         self.view.backgroundColor = Colors.DarkGray
+        self.enterButtonWidthConstraint.constant *= UIView.horizontalAdaptationFactor()
+        self.enterButtonHeightConstraint.constant *= UIView.verticalAdaptationFactor()
+        self.marketImageViewWidthConstraint.constant *= UIView.imageAdaptationFactor()
+        self.marketImageViewHeightConstraint.constant *= UIView.imageAdaptationFactor()
     }
     
     private func setupStrings() {

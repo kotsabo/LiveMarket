@@ -236,6 +236,7 @@
                     </view>
                     <connections>
                         <outlet property="marketTableView" destination="PHS-GF-cb5" id="gM1-yj-RSI"/>
+                        <outlet property="navigationBarHeightConstraint" destination="u05-9A-Ocr" id="Jba-tK-S1d"/>
                         <outlet property="navigationBarView" destination="UWo-8O-hlc" id="cLn-RD-Xbh"/>
                     </connections>
                 </viewController>

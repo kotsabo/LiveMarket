@@ -47,7 +47,7 @@ class NavigationBar: UIView {
         self.contentView.addSubview(self.backButton)
         
         self.backButton.autoPinEdgeToSuperviewEdge(.Left, withInset: 15 * UIView.horizontalAdaptationFactor())
-        self.backButton.autoPinEdgeToSuperviewEdge(.Top, withInset: 40 * UIView.horizontalAdaptationFactor())
+        //self.backButton.autoPinEdgeToSuperviewEdge(.Top, withInset: 40 * UIView.horizontalAdaptationFactor())
         self.backButton.autoSetDimension(.Width, toSize: 45 * UIView.horizontalAdaptationFactor())
         self.backButton.autoSetDimension(.Height, toSize: 45 * UIView.horizontalAdaptationFactor())
 
@@ -72,6 +72,8 @@ class NavigationBar: UIView {
         self.titleLeadingConstraint = self.titleLabel.autoPinEdge(.Left, toEdge: .Right, ofView: self.backButton!, withOffset: 15 * UIView.horizontalAdaptationFactor())
         self.titleLabel.autoPinEdgeToSuperviewEdge(.Top, withInset: 50 * UIView.horizontalAdaptationFactor())
         self.titleLabel.autoPinEdgeToSuperviewEdge(.Right, withInset: 70 * UIView.horizontalAdaptationFactor())
+        
+        self.backButton.autoAlignAxis(.Horizontal, toSameAxisOfView: self.titleLabel)
 
     }
     
