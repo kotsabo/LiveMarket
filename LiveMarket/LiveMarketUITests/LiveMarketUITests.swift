@@ -31,6 +31,13 @@ class LiveMarketUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        XCUIApplication().buttons.staticTexts["ENTER"]
+        XCUIApplication().staticTexts["The Market"]
+        
+        let cells = XCUIApplication().tables.cells
+        XCTAssertEqual(cells.count, 0, "found instead: \(cells.debugDescription)")
+        
     }
     
 }

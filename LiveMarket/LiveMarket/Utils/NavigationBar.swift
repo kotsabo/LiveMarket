@@ -47,7 +47,6 @@ class NavigationBar: UIView {
         self.contentView.addSubview(self.backButton)
         
         self.backButton.autoPinEdgeToSuperviewEdge(.Left, withInset: 15 * UIView.horizontalAdaptationFactor())
-        //self.backButton.autoPinEdgeToSuperviewEdge(.Top, withInset: 40 * UIView.horizontalAdaptationFactor())
         self.backButton.autoSetDimension(.Width, toSize: 45 * UIView.horizontalAdaptationFactor())
         self.backButton.autoSetDimension(.Height, toSize: 45 * UIView.horizontalAdaptationFactor())
 
@@ -59,7 +58,7 @@ class NavigationBar: UIView {
         self.contentView.addSubview(self.rightButton)
         
         self.rightButton.autoPinEdgeToSuperviewEdge(.Right, withInset: 15 * UIView.horizontalAdaptationFactor())
-        self.rightButton.autoPinEdgeToSuperviewEdge(.Top, withInset: 40 * UIView.horizontalAdaptationFactor())
+        self.rightButton.autoPinEdgeToSuperviewEdge(.Top, withInset: 40 * UIView.verticalAdaptationFactor())
         self.rightButton.autoSetDimension(.Width, toSize: 45 * UIView.horizontalAdaptationFactor())
         self.rightButton.autoSetDimension(.Height, toSize: 45 * UIView.horizontalAdaptationFactor())
         
@@ -70,7 +69,7 @@ class NavigationBar: UIView {
         self.contentView.addSubview(self.titleLabel)
         
         self.titleLeadingConstraint = self.titleLabel.autoPinEdge(.Left, toEdge: .Right, ofView: self.backButton!, withOffset: 15 * UIView.horizontalAdaptationFactor())
-        self.titleLabel.autoPinEdgeToSuperviewEdge(.Top, withInset: 50 * UIView.horizontalAdaptationFactor())
+        self.titleLabel.autoPinEdgeToSuperviewEdge(.Top, withInset: 50 * UIView.verticalAdaptationFactor())
         self.titleLabel.autoPinEdgeToSuperviewEdge(.Right, withInset: 70 * UIView.horizontalAdaptationFactor())
         
         self.backButton.autoAlignAxis(.Horizontal, toSameAxisOfView: self.titleLabel)
@@ -89,8 +88,14 @@ class NavigationBar: UIView {
 public extension UIView {
     
     static func horizontalAdaptationFactor() -> CGFloat {
-        let ratio: CGFloat = UIScreen.mainScreen().bounds.size.width / 375.0
-        return ratio
+        var ratio: CGFloat?
+        if self.orientationOfDeviceIsPortrait() {
+            ratio = UIScreen.mainScreen().bounds.size.width / 375.0
+        }
+        else {
+            ratio = UIScreen.mainScreen().bounds.size.height / 375.0
+        }
+        return ratio!
     }
     
     static func imageAdaptationFactor() -> CGFloat {
@@ -100,8 +105,22 @@ public extension UIView {
     }
     
     static func verticalAdaptationFactor() -> CGFloat {
-        let ratio: CGFloat = UIScreen.mainScreen().bounds.size.height / 667.0
-        return ratio
+        var ratio: CGFloat?
+        if self.orientationOfDeviceIsPortrait() {
+            ratio = UIScreen.mainScreen().bounds.size.height / 667.0
+        }
+        else {
+            ratio = UIScreen.mainScreen().bounds.size.width / 667.0
+        }
+        return ratio!
+    }
+    
+    static func orientationOfDeviceIsPortrait() -> Bool {
+        
+        if UIDevice.currentDevice().orientation == .Portrait {
+            return true
+        }
+        return false
     }
     
 }
