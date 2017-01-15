@@ -23,7 +23,14 @@ class CodeUtils {
         let fractionalPip_2 = self.getFractionalPip(new_number_2)
         
         let spread = (number_buy! - number_sell!) * Double(pipMultiplier)
-        let spreadString = String(format: "%.2f", spread)
+        
+        let formatter = NSNumberFormatter()
+        formatter.numberStyle = NSNumberFormatterStyle.DecimalStyle
+        formatter.maximumFractionDigits = 2
+        formatter.minimumFractionDigits = 2
+        formatter.roundingMode = .RoundDown
+        
+        let spreadString = formatter.stringFromNumber(spread)
         
         var finalNumber_1: String?
         var finalNumber_2: String?
@@ -44,7 +51,7 @@ class CodeUtils {
         let highlight_1 = self.getIntPart(new_number_1).substringFromIndex(self.getIntPart(new_number_1).endIndex.advancedBy(-2))
         let highlight_2 = self.getIntPart(new_number_2).substringFromIndex(self.getIntPart(new_number_2).endIndex.advancedBy(-2))
 
-        return (finalNumber_1!,finalNumber_2!,fractionalPip_1,fractionalPip_2,spreadString,highlight_1,highlight_2)
+        return (finalNumber_1!,finalNumber_2!,fractionalPip_1,fractionalPip_2,spreadString!,highlight_1,highlight_2)
     }
     
     static func getFractionalPip(number: Double?) -> String {

@@ -95,7 +95,7 @@ class MarketViewController: UIViewController, UITableViewDataSource, UITableView
         }
     }
     
-    private func data(index: Int) -> (String, String, String, String, String, String, String) {
+    func data(index: Int) -> (String, String, String, String, String, String, String) {
         
         return CodeUtils.calculations(self.ratesArray[index].buy, number_sell: self.ratesArray[index].sell, pipMultiplier: self.ratesArray[index].pipMultiplier!)
     }

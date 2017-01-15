@@ -23,6 +23,10 @@ public class RatesDAO: Mappable {
 	public var currencyId: Int?
 	public var pipMultiplier: Int?
 	public var name: String?
+    
+    init() {
+        
+    }
 
     // MARK: ObjectMapper Initalizers
     /**
